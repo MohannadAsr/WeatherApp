@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  font-family: 'Josefin Sans', sans-serif !important;
+  user-select: none !important;
+}
+
+.app {
+  min-height: 100vh;
+  min-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.onoff-button {
+  background-color: aliceblue;
+  width: 40px;
+  padding: 2px;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 20px;
+  transition: .8s linear;
+  cursor: pointer;
+}
+
+.onoff-button.on {
+  justify-content: flex-start;
+}
+
+
+
+.onoff-button .pointer {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #333;
+}
+
+.form-control {
+  border: 1px solid white !important;
+  color: #333 !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+
+.btn {
+  border: none !important;
+  color: white !important;
+  background-color: #333 !important;
+  transition: 0.5s linear;
+}
+
+.btn:hover {
+
+  background-color: rgb(81, 79, 79) !important;
+}
+
+.btn::placeholder {
+  color: white !important;
+}
+
+.forecast {
+  background-color: rgb(0 0 0 / 63%);
+  /* height: 70vh; */
+  border-radius: 10px;
+  position: relative;
+}
+
+.swiper-div {
+  background-color: rgba(36, 36, 36, 0.825);
+  border-radius: 5px;
+}
+
+.forecast .country {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 5px;
+  background-color: rgb(0 0 0 / 63%);
+  border-radius: 7px;
+}
+
+.forecast .fav {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  background-color: rgb(0 0 0 / 63%);
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.forecast .fav:hover {
+
+  background-color: black;
+  color: white !important;
+
+
+}
+
+.side-settings {
+  width: 300px;
+  position: absolute;
+  left: 0;
+  transition: 0.5s ease-in;
+  top: 0;
+  background-color: #1f1f1f;
+  box-shadow: -1px 3px 19px 0px #464848;
+  z-index: 999999;
+  height: 100%;
+}
+
+.side-settings .option {
+  background-color: rgba(24, 0, 0, 0.284);
+  border-radius: 5px;
+
+}
+
+.side-settings.hide {
+  left: -300px;
+
+  box-shadow: none;
+}
+
+.side-settings .side-button {
+  position: absolute;
+  background-color: rgba(187, 68, 68, 0.856);
+  right: -50px;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  z-index: 99999;
+  transform: translateY(-170%);
+  cursor: pointer;
+  color: white;
+  border-radius: 0 7px 7px 0;
+
+}
+
+.side-settings .side-button:hover {
+  background-color: rgba(187, 68, 68);
+}
+
+.spinner {
+  animation: spin infinite 2s linear alternate;
+
+  /*You can increase or decrease the timer (5s) to 
+   increase or decrease the speed of the spinner*/
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg) scale(0.9);
+
+  }
+
+  to {
+    transform: rotate(360deg) scale(1.2);
+
+
+  }
+}
+
+
+.side-favorites {
+  width: 300px;
+  position: absolute;
+  right: 0;
+  transition: 0.5s ease-in;
+  top: 0;
+  background-color: #1f1f1f;
+  box-shadow: -1px 3px 19px 0px #464848;
+  z-index: 999999;
+  height: 100%;
+
+}
+
+
+.side-favorites.hide {
+  right: -300px;
+  box-shadow: none;
+}
+
+
+.side-favorites .side-button {
+  position: absolute;
+  background-color: #eae5e5;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  z-index: 99999;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: white;
+  border-radius: 7px 0 0 7px;
+
+}
+
+
+.beat {
+  animation: beating infinite .8s linear alternate;
+
+}
+
+@keyframes beating {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+
+}
+
+
+.side-favorites .fav {
+  background-color: rgba(24, 0, 0, 0.284);
+  border-radius: 5px;
+  cursor: pointer;
+  background-size: cover;
+  position: relative;
+}
+
+.side-favorites .fav .info {
+  background-color: #f7f2f257;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+
+
+.side-favorites .fav:hover {
+  transform: scale(1.06);
+}
+
+.side-favorites .fav .del {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  top: -5px;
+  right: -5px;
+  color: white;
+  font-size: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+
+}
+
+.recent-section {
+  background-color: rgba(240, 248, 255, 0.723);
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.recent-section .recent-item {
+  border-radius: 5px;
+  background-color: rgba(9, 9, 9, 0.744);
+  cursor: pointer;
+  font-size: 12px;
+}
